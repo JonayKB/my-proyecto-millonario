@@ -123,7 +123,7 @@ git push origin master
     aaaff10..3cea8f5  main -> main
 
     ```
-`
+
 
 </details>
 
@@ -185,8 +185,19 @@ git commit -m "añadido fichero .gitignore"
 - git commit -m "añadido fichero .gitignore"
 
     ```code
-
+        [main 9ebd13a] añadido fichero .gitignore
+    2 files changed, 112 insertions(+), 1 deletion(-)
+    create mode 100644 .gitignore
     ```
+</details>
+ <details>
+
+ <summary><strong>Pregunta</strong></summary>
+ 
+```code
+Un fichero o directorio añadido a .gitignore sera ignorado por git al subirlo al repositorio
+```
+
 </details>
 
 ---
