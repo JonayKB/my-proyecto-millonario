@@ -13,12 +13,12 @@
  - [Crear una rama v0.2](#crear-una-rama-v02)
  - [Añadir fichero 2.txt](#añadir-fichero-2txt)
  - [Crear una rama remota v0.2](#crear-ramma-remota-v02)
- - [Merge directo]()
- - [Merge con conflicto]()
- - [Listado de ramas]()
- - [Arreglar conflicto]()
- - [Borrar rama]()
- - [Listado de cambios]()
+ - [Merge directo](#merge-directo)
+ - [Merge con conflicto](#merge-con-conflicto)
+ - [Listado de ramas](#listado-de-ramas)
+ - [Arreglar conflicto](#arreglar-conflicto)
+ - [Borrar rama](#borrar-rama)
+ - [Listado de cambios](#listado-de-cambios)
 
 ## README.md
 
@@ -768,10 +768,10 @@ git commit -m "arreglado merge en 1.txt"
 <details>
 <summary><strong>Salida</strong></summary>
 
-- git branch --merged
+- git commit -m "arreglado merge en 1.txt"
 
     ```code
-    * main
+    [main af6ce90] arreglado merge en 1.txt
     ```
 
 
@@ -779,6 +779,100 @@ git commit -m "arreglado merge en 1.txt"
 
 ---
 
+## Borrar rama
 
+```code
+git tag v0.2
+git branch -D v0.2
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git tag v0.2
+
+    ```code
+    Crea una rama llamada v0.2
+    ```
+
+- git branch -D v0.2
+
+    ```code
+    Borra la rama llamada v0.2
+    ```
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git tag v0.2
+
+    ```code
+    
+    ```
+
+- git branch -D v0.2
+
+    ```code
+    Deleted branch v0.2 (was 580fe21).
+    ```
+
+</details>
+
+---
+
+
+## Listado de cambios
+
+```code
+git config --global alias.list 'log --oneline --decorate --graph --all'
+git list
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git config --global alias.list 'log --oneline --decorate --graph --all'
+
+    ```code
+    Crea una "función" que al llamarla ejecuta "log --oneline --decorate --graph --all" 
+    ```
+
+- git list
+
+    ```code
+    Enseña git config --global alias.list 'log --oneline --decorate --graph --all'
+    ```
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git config --global alias.list 'log --oneline --decorate --graph --all'
+
+    ```code
+
+    ```
+
+- git list
+
+    ```code
+    *   af6ce90 (HEAD -> main, tag: v0.2) arreglado merge en 1.txt
+    |\
+    | * 580fe21 adios en 1.txt
+    * | 7f8904b hola en 1.txt
+    * | 95051ed hola en 1.txt
+    |/
+    * 19f966a (origin/v0.2) añadido 2.txt
+    * 9b7df7b (tag: v0.1, origin/main, origin/HEAD) añadido 1.txt
+    * e09d1a5 commit inicial
+    * 3cea8f5 commit inicial
+    * aaaff10 Initial commit
+    ```
+
+</details>
+
+---
 
 </div>
