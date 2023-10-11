@@ -5,11 +5,11 @@
 ## Índice
  - [README.md](#readmemd)
  - [Commit inicial](#commit-inicial)
- - [Push inicial]()
- - [Ignorar archivos]()
- - [Añadir fichero 1.txt]()
- - [Crear el tag v0.1]()
- - [Subir el tag v0.1]()
+ - [Push inicial](#push-inicial)
+ - [Ignorar archivos](#ignorar-archivos)
+ - [Añadir fichero 1.txt](#añadir-fichero-1txt)
+ - [Crear el tag v0.1](#crear-el-tag-v01)
+ - [Subir el tag v0.1](#subir-el-tag-v01)
  - [Crear una rama v0.2]()
  - [Añadir fichero 2.txt]()
  - [Crear una rama remota v0.2]()
@@ -40,7 +40,6 @@ No es necesario la creación del READM.md ya que seleccione la opción de crearl
 
 ```
 </details>
-<details>
 
 
 ---
@@ -84,13 +83,6 @@ git commit -m "commit inicial"
 
 </details>
 
-<summary><strong>Pregunta</strong></summary>
-
-- 
-```code
-
-```
-</details>
 
 ---
 
@@ -134,9 +126,9 @@ git push origin master
 <summary><strong>Pregunta</strong></summary>
 
 - Respuesta:
-```code
-Esos dos argumentos el origin indica que es la nube, y el master es la rama, pero estos son opcionales
-```
+    ```code
+    Esos dos argumentos el origin indica que es la nube, y el master es la rama, pero estos son opcionales
+    ```
 
 >WARNING: Sino ponemos estos argumentos, puede ocurrir el error de estar en la rama equivocada y subir los archivos a donde no debemos
 </details>
@@ -208,9 +200,9 @@ git commit -m "añadido fichero .gitignore"
 <summary><strong>Pregunta</strong></summary>
 
 - Respuesta:
-```code
-El .gitignore indica los archivos que no hay que subir, por ende ni la carpeta ni el archivo seran subidos
-```
+    ```code
+    El .gitignore indica los archivos que no hay que subir, por ende ni la carpeta ni el archivo seran subidos
+    ```
 
 
 </details>
@@ -219,7 +211,7 @@ El .gitignore indica los archivos que no hay que subir, por ende ni la carpeta n
 
 
 
-## Ignorar archivos
+## Añadir fichero 1.txt
 
 ```code
 touch 1.txt
@@ -269,7 +261,9 @@ git commit -m "añadido 1.txt"
 - git commit -m "añadido 1.txt"
 
     ```code
-
+        [main 9b7df7b] añadido 1.txt
+    2 files changed, 160 insertions(+), 5 deletions(-)
+    create mode 100644 1.txt
     ```
 
 
@@ -281,9 +275,220 @@ git commit -m "añadido 1.txt"
 <summary><strong>Pregunta</strong></summary>
 
 - Respuesta:
-```code
+    ```code
+    El git add . añade los archivos al próximo commit, y el commit crea un marcador en locar, que despues se puede subir con un push
+    ```
 
+
+</details>
+
+---
+
+
+
+## Crear el tag v0.1
+
+```code
+git tag v0.1
 ```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git tag v0.1
+
+    ```code
+    Crea un tag llamado v0.1
+    ```
+
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git tag v0.1
+
+    ```code
+
+    ```
+
+
+
+
+
+
+</details>
+
+
+---
+
+
+
+## Subir el tag v0.1
+
+```code
+git push --tag origin master
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git push --tag origin master
+
+    ```code
+    Envia la información de la versiñon a un tag
+    ```
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git push --tag origin main
+
+    ```code
+        Enumerating objects: 6, done.
+    Counting objects: 100% (6/6), done.
+    Delta compression using up to 16 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (4/4), 1.52 KiB | 1.52 MiB/s, done.
+    Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/JonayKB/my-proyecto-millonario
+    e09d1a5..9b7df7b  main -> main
+    * [new tag]         v0.1 -> v0.1
+    ```
+
+
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Pregunta</strong></summary>
+
+- Respuesta:
+    ```code
+    Los tags son versiones estables guardadas, es como una rama que solo guarda los punteros, no todos los archivos en si
+    ```
+
+
+</details>
+
+---
+
+
+## Crear una rama v0.2
+
+```code
+git branch v0.2
+git checkout v0.2
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git branch v0.2
+
+    ```code
+    Crea una rama llamada v0.2
+    ```
+
+- git checkout v0.2
+
+    ```code
+    Te posiciona en la rama v0.2
+    ```
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git branch v0.2
+
+    ```code
+
+    ```
+
+- git checkout v0.2
+
+    ```code
+    Switched to branch 'v0.2'
+    M       README.md
+    ```
+
+</details>
+
+---
+
+## Añadir fichero 2.txt
+
+```code
+touch 2.txt
+git add .
+git commit -m "añadido 2.txt"
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- touch 2.txt
+
+    ```code
+    Crea un fichero llamado 2.txt
+    ```
+
+- git add .
+
+    ```code
+    Añade los ficheros al siguiente commit
+    ```
+
+- git commit -m "añadido 2.txt"
+
+    ```code
+    Creamos una marca llamada "añadido 2.txt"
+    ```
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- touch 2.txt
+
+    ```code
+ 
+    ```
+
+- git add .
+
+    ```code
+
+    ```
+
+- git commit -m "añadido 2.txt"
+
+    ```code
+    Creamos una marca llamada "añadido 2.txt"
+    ```
+
+
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Pregunta</strong></summary>
+
+- Respuesta:
+    ```code
+    El fin del uso de ramas es el trabajo conjunto en distintas ramas, para que los trabajadores no se molesten entre ellos, ademas de mantener en la rama main una versión estable
+    ```
 
 
 </details>
