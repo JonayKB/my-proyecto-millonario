@@ -552,7 +552,7 @@ git push origin v0.2
 
 
 
-## Añadir fichero 2.txt
+## Merge directo
 
 ```code
 git checkout master
@@ -593,12 +593,6 @@ git merge v0.2 -m "merge v0.2 sin conflictos"
     ```
 
 
-
-
-
-
-
-
 </details>
 
 <details>
@@ -611,5 +605,83 @@ git merge v0.2 -m "merge v0.2 sin conflictos"
 
 
 </details>
+
+---
+
+
+
+## Merge directo
+
+```code
+git checkout master
+echo "Hola" >> 1.txt
+git add .
+git commit -m "hola en 1.txt"
+
+git checkout v0.2
+echo "Adios" >> 1.txt
+git add .
+git commit -m "adios en 1.txt"
+
+git checkout master
+git merge v0.2
+vim 1.txt
+git add .
+git commit -m "arreglado merge en 1.txt"
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git commit -m "hola en 1.txt"
+
+    ```code
+    Despues de haber modificado la información de 1.txt y añadirla, hacemos un commit a la rama main
+    ```
+
+- git commit -m "adios en 1.txt"
+
+    ```code
+    Despues de haber modificado la información de 1.txt y añadirla, hacemos un commit a la rama v0.2
+    ```
+
+- git commit -m "arreglado merge en 1.txt"
+
+    ```code
+    Despues de haber modificado la información de 1.txt y añadirla, realizamos un merge  y realizamos un commit 
+    ```
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git commit -m "hola en 1.txt"
+
+    ```code
+
+    ```
+
+- git commit -m "adios en 1.txt"
+
+    ```code
+    Despues de haber modificado la información de 1.txt y añadirla, hacemos un commit a la rama v0.2
+    ```
+
+- git commit -m "arreglado merge en 1.txt"
+
+    ```code
+    Despues de haber modificado la información de 1.txt y añadirla, realizamos un merge  y realizamos un commit 
+    ```
+
+
+
+
+</details>
+
+<details>
+
 
 ---
