@@ -610,7 +610,7 @@ git merge v0.2 -m "merge v0.2 sin conflictos"
 
 
 
-## Merge directo
+## Merge con conflicto
 
 ```code
 git checkout master
@@ -647,7 +647,7 @@ git commit -m "arreglado merge en 1.txt"
 - git commit -m "arreglado merge en 1.txt"
 
     ```code
-    Despues de haber modificado la información de 1.txt y añadirla, realizamos un merge  y realizamos un commit 
+    Despues de haber modificado la información de 1.txt y añadirla, realizamos un merge  y realizamos un commit (Creara un error y tendremos que resolverlo eligiendo con que quedarnos, si la versión actual, la entrante o una combinación)
     ```
 
 
@@ -668,14 +668,54 @@ git commit -m "arreglado merge en 1.txt"
 - git commit -m "adios en 1.txt"
 
     ```code
-    Despues de haber modificado la información de 1.txt y añadirla, hacemos un commit a la rama v0.2
+    [v0.2 580fe21] adios en 1.txt
+    1 file changed, 1 insertion(+)
+    ```
+
+- git merge v0.2
+
+    ```code
+    Auto-merging 1.txt
+    CONFLICT (content): Merge conflict in 1.txt
+    Automatic merge failed; fix conflicts and then commit the result.
     ```
 
 - git commit -m "arreglado merge en 1.txt"
 
     ```code
-    Despues de haber modificado la información de 1.txt y añadirla, realizamos un merge  y realizamos un commit 
+    error: Committing is not possible because you have unmerged files.
+    hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+    hint: as appropriate to mark resolution and make a commit.
+    fatal: Exiting because of an unresolved conflict.
+    U       1.txt
     ```
+
+</details>
+
+---
+
+## Listado de ramas
+
+```code
+git branch --merged
+git branch --no-merged
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git branch --merged
+
+    ```code
+    Nos enseña las ramas que estan unidas a la rama main
+    ```
+
+- git branch --no-merged
+
+    ```code
+    Nos enseña las ramas que NO estan unidas a la rama main
+    ```
+
+
 
 
 
@@ -683,6 +723,62 @@ git commit -m "arreglado merge en 1.txt"
 </details>
 
 <details>
+<summary><strong>Salida</strong></summary>
 
+- git branch --merged
+
+    ```code
+    * main
+    ```
+
+- git branch --no-merged
+
+    ```code
+      v0.2
+    ```
+
+</details>
 
 ---
+
+## Arreglar conflicto
+
+```code
+vim 1.txt
+git add .
+git commit -m "arreglado merge en 1.txt"
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git commit -m "arreglado merge en 1.txt"
+
+    ```code
+    Después de arreglar el conflicto modificando el archivo y añadir los ficheros realizamos un commit
+    ```
+
+
+
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git branch --merged
+
+    ```code
+    * main
+    ```
+
+
+</details>
+
+---
+
+
+
+</div>
