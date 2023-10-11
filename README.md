@@ -40,6 +40,8 @@ No es necesario la creación del READM.md ya que seleccione la opción de crearl
 
 ```
 </details>
+<details>
+
 
 ---
 
@@ -82,10 +84,53 @@ git commit -m "commit inicial"
 
 </details>
 
+<summary><strong>Pregunta</strong></summary>
+
+- 
+```code
+
+```
+</details>
+
 ---
 
 
+## Commit inicial
 
+```code
+git push origin master
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git add .
+
+    ```code
+    Envia los archivos añadidos al repositiorio de la nube
+    ```
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git add .
+    ```code
+
+    ```
+
+
+</details>
+
+<summary><strong>Pregunta</strong></summary>
+
+- 
+```code
+
+```
+</details>
+
+---
 
 
 
