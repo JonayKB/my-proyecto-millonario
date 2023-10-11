@@ -661,7 +661,8 @@ git commit -m "arreglado merge en 1.txt"
 - git commit -m "hola en 1.txt"
 
     ```code
-
+        [main 95051ed] hola en 1.txt
+    2 files changed, 77 insertions(+), 4 deletions(-)
     ```
 
 - git commit -m "adios en 1.txt"
