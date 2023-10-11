@@ -10,9 +10,9 @@
  - [Añadir fichero 1.txt](#añadir-fichero-1txt)
  - [Crear el tag v0.1](#crear-el-tag-v01)
  - [Subir el tag v0.1](#subir-el-tag-v01)
- - [Crear una rama v0.2]()
- - [Añadir fichero 2.txt]()
- - [Crear una rama remota v0.2]()
+ - [Crear una rama v0.2](#crear-una-rama-v02)
+ - [Añadir fichero 2.txt](#añadir-fichero-2txt)
+ - [Crear una rama remota v0.2](#crear-ramma-remota-v02)
  - [Merge directo]()
  - [Merge con conflicto]()
  - [Listado de ramas]()
@@ -460,7 +460,7 @@ git commit -m "añadido 2.txt"
 - touch 2.txt
 
     ```code
- 
+    
     ```
 
 - git add .
@@ -472,7 +472,9 @@ git commit -m "añadido 2.txt"
 - git commit -m "añadido 2.txt"
 
     ```code
-    Creamos una marca llamada "añadido 2.txt"
+        [v0.2 19f966a] añadido 2.txt
+    2 files changed, 225 insertions(+), 20 deletions(-)
+    create mode 100644 2.txt
     ```
 
 
@@ -496,3 +498,118 @@ git commit -m "añadido 2.txt"
 ---
 
 </div>
+
+
+
+
+## Crear ramma remota v0.2
+
+```code
+git push origin v0.2
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git push origin v0.2
+
+    ```code
+    Sube la información a la rama v0.2
+    ```
+
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git push origin v0.2
+
+    ```code
+        [v0.2 19f966a] añadido 2.txt
+    2 files changed, 225 insertions(+), 20 deletions(-)
+    create mode 100644 2.txt
+    PS B:\Repositorios Clase\my-proyecto-millonario> git push origin v0.2
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 16 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 1.24 KiB | 1.24 MiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote:
+    remote: Create a pull request for 'v0.2' on GitHub by visiting:
+    remote:      https://github.com/JonayKB/my-proyecto-millonario/pull/new/v0.2
+    remote:
+    To https://github.com/JonayKB/my-proyecto-millonario
+    * [new branch]      v0.2 -> v0.2
+    ```
+
+
+</details>
+
+---
+
+
+
+## Añadir fichero 2.txt
+
+```code
+git checkout master
+git merge v0.2 -m "merge v0.2 sin conflictos"
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git checkout master
+
+    ```code
+    Nos posicionamos en la rama master
+    ```
+
+- git merge v0.2 -m "merge v0.2 sin conflictos"
+
+    ```code
+    Unimos la rama v0.2 a la rama main
+    ```
+
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git checkout master
+
+    ```code
+    
+    ```
+
+- git merge v0.2 -m "merge v0.2 sin conflictos"
+
+    ```code
+
+    ```
+
+
+
+
+
+
+
+
+</details>
+
+<details>
+<summary><strong>Pregunta</strong></summary>
+
+- Respuesta:
+    ```code
+    No deben surgir conflictos, ya que el archivo que se ha creado no existe en la rama principal, en caso de haberse modificado uno de los archivos ya creados si lo existira (En este caso si lo hay por el README, pero en lo explicado no debería de suceder)
+    ```
+
+
+</details>
+
+---
