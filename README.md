@@ -1086,7 +1086,7 @@ git push origin v0.2
 - git commit -m "Creacion de la rama remota v0.2"
 
     ```code
-
+    git commit -m "Creacion de la rama remota v0.2"
     ```
 
 - git push origin v0.2
