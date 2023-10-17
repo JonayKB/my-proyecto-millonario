@@ -1132,7 +1132,9 @@ git merge v0.2 -m "Merge directo"
 - git checkout main
 
     ```code
-    Nos mueve a la rama main
+        Cambiado a rama 'main'
+    Tu rama está adelantada a 'origin/main' por 1 commit.
+    (usa "git push" para publicar tus commits locales)
     ```
 
 - git merge v0.2 -m "Merge directo"
