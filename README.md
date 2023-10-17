@@ -1100,4 +1100,51 @@ git push origin v0.2
 
 ---
 
+
+
+## Merge directo
+
+```code
+git checkout main
+git merge v0.2 -m "Merge directo"
+```
+ <details>
+ <summary><strong>Explicación</strong></summary>
+
+- git checkout main
+
+    ```code
+    Nos mueve a la rama main
+    ```
+
+- git merge v0.2 -m "Merge directo"
+
+    ```code
+    Une la rama v0.2 a la main
+    ```
+
+
+</details>
+
+<details>
+<summary><strong>Salida</strong></summary>
+
+- git checkout main
+
+    ```code
+    Nos mueve a la rama main
+    ```
+
+- git merge v0.2 -m "Merge directo"
+
+    ```code
+    Une la rama v0.2 a la main
+    ```
+
+
+
+</details>
+
+---
+
 </div>
