@@ -1140,8 +1140,11 @@ git merge v0.2 -m "Merge directo"
 - git merge v0.2 -m "Merge directo"
 
     ```code
-    Une la rama v0.2 a la main
+    merge: merge directo - nada que podamos fusionar
+
+
     ```
+    Por alguna razón, aun la otra rama estando commiteada y con el push, no me detecta nada con lo que hacer merge
 
 
 
